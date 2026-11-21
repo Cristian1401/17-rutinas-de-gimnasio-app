@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "17 Rutinas de Gimnasio",
+    "slug": "17-rutinas-de-gimnasio-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "rutinas17",
+    "userInterfaceStyle": "dark",
+    "plugins": ["expo-router"]
+  }
+}
