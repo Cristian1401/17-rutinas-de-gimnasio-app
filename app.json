@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "scheme": "rutinas17",
     "userInterfaceStyle": "dark",
-    "plugins": ["expo-router"]
+    "plugins": ["expo-router"],
+    "extra": {
+      "EXPO_PUBLIC_API_URL": "https://17-rutinas-de-gimnasio-api.vercel.app"
+    }
   }
 }

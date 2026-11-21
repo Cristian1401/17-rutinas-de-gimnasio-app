@@ -1,6 +1,7 @@
-import { useFocusEffect, useLocalSearchParams } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
+import Boton from '../../src/components/Boton';
 import SeccionEjercicios from '../../src/components/SeccionEjercicios';
 import SeccionSeries from '../../src/components/SeccionSeries';
 import {
@@ -151,6 +152,7 @@ function useManejadores(
 
 export default function RutinaDetalle() {
   const params = useLocalSearchParams<{ id: string }>();
+  const router = useRouter();
   const id = String(params.id);
   const { rutina, ejercicios, series, ejecutarYRecargar } = useDetalle(id);
   const [nombre, setNombre] = useState('');
@@ -178,6 +180,13 @@ export default function RutinaDetalle() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.tituloPrincipal}>{rutina.nombre}</Text>
+      <Boton
+        etiqueta="Entrenar esta rutina"
+        texto="Entrenar"
+        onPress={() =>
+          router.push({ pathname: '/entrenar/[id]', params: { id } })
+        }
+      />
       <SeccionEjercicios
         rutina={rutina}
         ejercicios={ejercicios}

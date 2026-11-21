@@ -6,6 +6,7 @@ type Props = {
   onChange: (valor: string) => void;
   placeholder?: string;
   numerico?: boolean;
+  seguro?: boolean;
 };
 
 export default function Campo({
@@ -14,12 +15,14 @@ export default function Campo({
   onChange,
   placeholder,
   numerico = false,
+  seguro = false,
 }: Props) {
   return (
     <TextInput
       accessibilityLabel={etiqueta}
       keyboardType={numerico ? 'numeric' : 'default'}
       placeholder={placeholder}
+      secureTextEntry={seguro}
       style={styles.campo}
       value={valor}
       onChangeText={onChange}
