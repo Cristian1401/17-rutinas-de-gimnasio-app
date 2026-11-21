@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+dist/
+web-build/
+.env*
+!env.example
+*.pem
+*.key
+*.keystore
+*.jks
+*firebase-adminsdk*.json
+coverage/
+.DS_Store

@@ -1,0 +1,11 @@
+{
+  "name": "17-rutinas-de-gimnasio-app",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "format:check": "prettier --check .",
+    "test": "jest --coverage",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run test"
+  }
+}
